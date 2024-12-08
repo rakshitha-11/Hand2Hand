@@ -58,11 +58,11 @@ export const addProductFormElements = [
     name: "category",
     componentType: "select",
     options: [
-      { id: "men", label: "Men" },
-      { id: "women", label: "Women" },
-      { id: "kids", label: "Kids" },
+      { id: "men", label: "Double Bed" },
+      { id: "Women", label: "Single Bed" },
+      { id: "Sofa", label: "Sofa" },
       { id: "accessories", label: "Accessories" },
-      { id: "footwear", label: "Footwear" },
+      { id: "Chair", label: "Chair" },
     ],
   },
   {
@@ -70,12 +70,12 @@ export const addProductFormElements = [
     name: "brand",
     componentType: "select",
     options: [
-      { id: "nike", label: "Nike" },
-      { id: "adidas", label: "Adidas" },
-      { id: "puma", label: "Puma" },
-      { id: "levi", label: "Levi's" },
-      { id: "zara", label: "Zara" },
-      { id: "h&m", label: "H&M" },
+      { id: "Burrow", label: "Burrow" },
+      { id: "Adidas", label: "Adidas" },
+      { id: "puma", label: "Floyd" },
+      { id: "levi", label: "Maiden" },
+      { id: "zara", label: "IKEA" },
+      { id: "h&m", label: "Godrej Interio" },
     ],
   },
   {
@@ -114,22 +114,22 @@ export const shoppingViewHeaderMenuItems = [
   },
   {
     id: "men",
-    label: "Men",
+    label: "Double Bed",
     path: "/shop/listing",
   },
   {
-    id: "women",
-    label: "Women",
+    id: "Women",
+    label: "Single Bed",
     path: "/shop/listing",
   },
   {
-    id: "kids",
-    label: "Kids",
+    id: "Sofa",
+    label: "Sofa",
     path: "/shop/listing",
   },
   {
-    id: "footwear",
-    label: "Footwear",
+    id: "Chair",
+    label: "Chair",
     path: "/shop/listing",
   },
   {
@@ -145,37 +145,37 @@ export const shoppingViewHeaderMenuItems = [
 ];
 
 export const categoryOptionsMap = {
-  men: "Men",
-  women: "Women",
-  kids: "Kids",
+  men: "Double Bed",
+  Women: "Single Bed",
+  Sofa: "Sofa",
   accessories: "Accessories",
-  footwear: "Footwear",
+  Chair: "Chair",
 };
 
 export const brandOptionsMap = {
-  nike: "Nike",
-  adidas: "Adidas",
-  puma: "Puma",
-  levi: "Levi",
-  zara: "Zara",
-  "h&m": "H&M",
+  Burrow: "Burrow",
+  Adidas: "Adidas",
+  puma: "Floyd",
+  levi: "Maiden Home",
+  zara: "IKEA",
+  "h&m": "Godrej Interio",
 };
 
 export const filterOptions = {
   category: [
-    { id: "men", label: "Men" },
-    { id: "women", label: "Women" },
-    { id: "kids", label: "Kids" },
+    { id: "men", label: "Double Bed" },
+    { id: "Women", label: "Single Bed" },
+    { id: "Sofa", label: "Sofa" },
     { id: "accessories", label: "Accessories" },
-    { id: "footwear", label: "Footwear" },
+    { id: "Chair", label: "Chair" },
   ],
   brand: [
-    { id: "nike", label: "Nike" },
-    { id: "adidas", label: "Adidas" },
-    { id: "puma", label: "Puma" },
-    { id: "levi", label: "Levi's" },
-    { id: "zara", label: "Zara" },
-    { id: "h&m", label: "H&M" },
+    { id: "Burrow", label: "Burrow" },
+    { id: "Adidas", label: "Adidas" },
+    { id: "puma", label: "Floyd" },
+    { id: "levi", label: "Maiden Home" },
+    { id: "zara", label: "IKEA" },
+    { id: "h&m", label: "Godrej Interio" },
   ],
 };
 

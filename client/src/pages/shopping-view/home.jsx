@@ -32,20 +32,20 @@ import ProductDetailsDialog from "@/components/shopping-view/product-details";
 import { getFeatureImages } from "@/store/common-slice";
 
 const categoriesWithIcon = [
-  { id: "men", label: "Men", icon: ShirtIcon },
-  { id: "women", label: "Women", icon: CloudLightning },
-  { id: "kids", label: "Kids", icon: BabyIcon },
+  { id: "men", label: "Double Bed", icon: ShirtIcon },
+  { id: "Women", label: "Women", icon: CloudLightning },
+  { id: "Sofa", label: "Sofa", icon: BabyIcon },
   { id: "accessories", label: "Accessories", icon: WatchIcon },
-  { id: "footwear", label: "Footwear", icon: UmbrellaIcon },
+  { id: "Chair", label: "Chair", icon: UmbrellaIcon },
 ];
 
 const brandsWithIcon = [
-  { id: "nike", label: "Nike", icon: Shirt },
-  { id: "adidas", label: "Adidas", icon: WashingMachine },
-  { id: "puma", label: "Puma", icon: ShoppingBasket },
-  { id: "levi", label: "Levi's", icon: Airplay },
-  { id: "zara", label: "Zara", icon: Images },
-  { id: "h&m", label: "H&M", icon: Heater },
+  { id: "Burrow", label: "Burrow", icon: Shirt },
+  { id: "Adidas", label: "Adidas", icon: WashingMachine },
+  { id: "puma", label: "Floyd", icon: ShoppingBasket },
+  { id: "levi", label: "Floyd", icon: Airplay },
+  { id: "zara", label: "IKEA", icon: Images },
+  { id: "h&m", label: "Godrej Interio", icon: Heater },
 ];
 function ShoppingHome() {
   const [currentSlide, setCurrentSlide] = useState(0);
