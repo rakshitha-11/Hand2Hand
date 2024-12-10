@@ -147,6 +147,7 @@ export const shoppingViewHeaderMenuItems = [
 export const categoryOptionsMap = {
   men: "Double Bed",
   Women: "Single Bed",
+  Furniture: "Furniture",
   Sofa: "Sofa",
   accessories: "Accessories",
   Chair: "Chair",
@@ -156,9 +157,10 @@ export const brandOptionsMap = {
   Burrow: "Burrow",
   Adidas: "Adidas",
   puma: "Floyd",
+  HomeStyle: "HomeStyle",
   levi: "Maiden Home",
   zara: "IKEA",
-  "h&m": "Godrej Interio",
+  hNm: "Godrej Interio",
 };
 
 export const filterOptions = {

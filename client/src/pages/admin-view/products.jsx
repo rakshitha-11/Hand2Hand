@@ -66,7 +66,7 @@ function AdminProducts() {
       : dispatch(
           addNewProduct({
             ...formData,
-            image: uploadedImageUrl,
+            // image: uploadedImageUrl,
           })
         ).then((data) => {
           if (data?.payload?.success) {
@@ -96,6 +96,31 @@ function AdminProducts() {
       .every((item) => item);
   }
 
+
+
+
+  const handleImageUpload = (event) => {
+    const file = event.target.files[0]; // Get the selected file (image)
+    
+    if (file) {
+      // Example: Using FileReader to generate a local URL (for local preview)
+      const reader = new FileReader();
+      
+      reader.onloadend = () => {
+        // Once the image is loaded, update the uploadedImageUrl state
+        setUploadedImageUrl(reader.result); // This is the data URL of the image
+      };
+  
+      // Read the file as a data URL
+      reader.readAsDataURL(file);
+      
+      // Optionally: Upload the image to a server or cloud storage to get a permanent URL
+      // uploadImageToServer(file).then((url) => {
+      //   setUploadedImageUrl(url);
+      // });
+    }
+  };
+
   useEffect(() => {
     dispatch(fetchAllProducts());
   }, [dispatch]);
@@ -122,6 +147,7 @@ function AdminProducts() {
             ))
           : null}
       </div>
+
       <Sheet
         open={openCreateProductsDialog}
         onOpenChange={() => {
@@ -136,6 +162,16 @@ function AdminProducts() {
               {currentEditedId !== null ? "Edit Product" : "Add New Product"}
             </SheetTitle>
           </SheetHeader>
+
+          {/* File input for image upload */}
+          <div className="py-4">
+            <input type="file" onChange={handleImageUpload} />
+            {/* Display uploaded image */}
+            {uploadedImageUrl && (
+              <img src={uploadedImageUrl} alt="Uploaded" className="mt-4 max-w-full h-auto" />
+            )}
+          </div>
+
           <ProductImageUpload
             imageFile={imageFile}
             setImageFile={setImageFile}
