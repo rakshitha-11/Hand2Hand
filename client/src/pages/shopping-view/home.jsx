@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import bannerOne from "../../assets/banner-1.webp";
 import bannerTwo from "../../assets/banner-2.webp";
 import bannerThree from "../../assets/banner-3.webp";
-// import productImage from '../../assets/account.jpg';
+import bannerFour from "../../assets/banner-4.webp";
 
 import p1 from '../../assets/featured/p1.jpg';
 import p2 from '../../assets/featured/p2.jpg';
@@ -26,8 +26,7 @@ import p19 from '../../assets/featured/p19.jpg';
 
 
 
-const bannerList = [bannerOne, bannerTwo, bannerThree];
-// const { cartItems } = useSelector((state) => state.shopCart);
+const bannerList = [bannerOne, bannerTwo, bannerThree, bannerFour];
 const featureProdList = [
   {
     id: 1,
@@ -234,21 +233,21 @@ import { getFeatureImages } from "@/store/common-slice";
 
 const categoriesWithIcon = [
   { id: "men", label: "Double Bed", icon: ShirtIcon },
-  // { id: "Women", label: "Women", icon: CloudLightning },
-  { id: "Sofa", label: "Sofa", icon: BabyIcon },
-  // { id: "accessories", label: "Accessories", icon: WatchIcon },
-  { id: "Chair", label: "Chair", icon: UmbrellaIcon },
-  { id: "Table", label: "Table", icon: UmbrellaIcon },
-  { id: "Single Bed", label: "Single Bed", icon: UmbrellaIcon },
+  // { id: "Women", label: "Office Desk", icon: CloudLightning },
+  { id: "Sofa", label: "Recliner Sofa", icon: BabyIcon },
+  { id: "accessories", label: "Dining Table Set", icon: WatchIcon },
+  // { id: "Chair", label: "Wooden Chair", icon: UmbrellaIcon },
+  { id: "Table", label: "Coffee Table", icon: UmbrellaIcon },
+  { id: "Single Bed", label: "Book Shelf", icon: UmbrellaIcon },
 ];
 
 const brandsWithIcon = [
-  { id: "Burrow", label: "Burrow", icon: Shirt },
-  { id: "Adidas", label: "Adidas", icon: WashingMachine },
-  { id: "puma", label: "Floyd", icon: ShoppingBasket },
-  { id: "levi", label: "Floyd", icon: Airplay },
-  { id: "zara", label: "IKEA", icon: Images },
-  { id: "h&m", label: "Godrej Interio", icon: Heater },
+  { id: "WoodenStreet", label: "WoodenStreet", icon: Shirt },
+  { id: "HomeTown", label: "HomeTown", icon: WashingMachine },
+  { id: "Durian", label: "Durian", icon: ShoppingBasket },
+  { id: "Nilkamal", label: "Nilkamal", icon: Airplay },
+  { id: "Ikea", label: "Ikea", icon: Images },
+  { id: "Godrej Interio", label: "Godrej Interio", icon: Heater },
 ];
 function ShoppingHome() {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -393,7 +392,7 @@ return (
     <section className="py-12 bg-gray-50">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl font-bold text-center mb-8">
-          Shop by category
+          SHOP BY CATEGORY
         </h2>
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
           {categoriesWithIcon.map((categoryItem) => (
@@ -415,7 +414,7 @@ return (
 
     <section className="py-12 bg-gray-50">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center mb-8">Shop by Brand</h2>
+        <h2 className="text-3xl font-bold text-center mb-8">BRANDS FOR YOU</h2>
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
           {brandsWithIcon.map((brandItem) => (
             <Card
@@ -438,7 +437,7 @@ return (
 <section className="py-12">
   <div className="container mx-auto px-4">
     <h2 className="text-3xl font-bold text-center mb-8">
-      Feature Products
+      OUR FEATURED PRODUCTS
     </h2>
 
     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
