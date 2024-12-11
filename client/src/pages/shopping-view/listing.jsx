@@ -21,6 +21,64 @@ import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useSearchParams } from "react-router-dom";
 
+import p1 from "../../assets/featured/p1.jpg";
+import p2 from "../../assets/featured/p2.jpg";
+import p3 from "../../assets/featured/p3.jpg";
+import p4 from "../../assets/featured/p4.jpg";
+const images = [p1, p2, p3, p4];
+
+const ProdList = [
+  {
+    id: 1,
+    image: p1, // image path
+    title: "Wooden Chair",
+    price: 120.0,
+    salePrice: 100.0,
+    totalStock: 50,
+    brand: "Furniture Co.",
+  },
+  {
+    id: 2,
+    image: p2,
+    title: "Office Desk",
+    price: 250.0,
+    salePrice: 230.0,
+    totalStock: 30,
+    brand: "OfficeWorks",
+  },
+  {
+    id: 3,
+    image: p3,
+    title: "Recliner Sofa",
+    price: 500.0,
+    salePrice: 450.0,
+    totalStock: 15,
+    brand: "Comfy Living",
+  },
+  {
+    id: 4,
+    image: p4,
+    title: "Dining Table Set",
+    price: 350.0,
+    salePrice: 320.0,
+    totalStock: 20,
+    brand: "HomeStyle",
+  },
+];
+
+// ShoppingProductTile.js
+const ShopTile = ({ product, handleGetProductDetails, handleAddtoCart }) => {
+  return (
+    <div className="product-tile">
+      <img src={product.image} alt={product.title} className="product-image" />
+      <h2>{product.title}</h2>
+      <p>Price: ${product.salePrice.toFixed(2)}</p>
+      <button onClick={() => handleGetProductDetails(product.id)}>View Details</button>
+      <button onClick={() => handleAddtoCart(product)}>Add to Cart</button>
+    </div>
+  );
+};
+
 function createSearchParamsHelper(filterParams) {
   const queryParams = [];
 
@@ -152,7 +210,7 @@ function ShoppingListing() {
         <div className="p-4 border-b flex items-center justify-between">
           <h2 className="text-lg font-extrabold">All Products</h2>
           <div className="flex items-center gap-3">
-            <span className="text-muted-foreground">
+          <span className="text-muted-foreground">
               {productList?.length} Products
             </span>
             <DropdownMenu>
@@ -184,15 +242,19 @@ function ShoppingListing() {
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 p-4">
           {productList && productList.length > 0
             ? productList.map((productItem) => (
-                <ShoppingProductTile
-                  handleGetProductDetails={handleGetProductDetails}
-                  product={productItem}
-                  handleAddtoCart={handleAddtoCart}
+              
+                <ShopTile
+                
+                key={productItem.id} // Make sure to add a unique key for each item
+                handleGetProductDetails={handleGetProductDetails}
+                product={productItem}
+                handleAddtoCart={handleAddtoCart}
                 />
               ))
             : null}
         </div>
       </div>
+
       <ProductDetailsDialog
         open={openDetailsDialog}
         setOpen={setOpenDetailsDialog}

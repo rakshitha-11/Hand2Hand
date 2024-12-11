@@ -66,7 +66,7 @@ function AdminProducts() {
       : dispatch(
           addNewProduct({
             ...formData,
-            // image: uploadedImageUrl,
+            image: uploadedImageUrl,
           })
         ).then((data) => {
           if (data?.payload?.success) {
@@ -115,9 +115,9 @@ function AdminProducts() {
       reader.readAsDataURL(file);
       
       // Optionally: Upload the image to a server or cloud storage to get a permanent URL
-      // uploadImageToServer(file).then((url) => {
-      //   setUploadedImageUrl(url);
-      // });
+      uploadImageToServer(file).then((url) => {
+        setUploadedImageUrl(url);
+      });
     }
   };
 
