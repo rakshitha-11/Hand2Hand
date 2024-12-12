@@ -205,17 +205,27 @@ const featureProdList = [
 import {
   Airplay,
   BabyIcon,
+  BedDoubleIcon,
+  BookDashedIcon,
   ChevronLeftIcon,
   ChevronRightIcon,
   CloudLightning,
+  Flower,
+  Flower2,
   Heater,
   Images,
+  LucideHome,
   Shirt,
   ShirtIcon,
   ShoppingBasket,
+  SofaIcon,
+  Table2Icon,
+  TableIcon,
+  TicketMinus,
   UmbrellaIcon,
   WashingMachine,
   WatchIcon,
+  WavesIcon,
 } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { useEffect, useState } from "react";
@@ -232,21 +242,21 @@ import ProductDetailsDialog from "@/components/shopping-view/product-details";
 import { getFeatureImages } from "@/store/common-slice";
 
 const categoriesWithIcon = [
-  { id: "men", label: "Double Bed", icon: ShirtIcon },
+  { id: "men", label: "Double Bed", icon: BedDoubleIcon },
   // { id: "Women", label: "Office Desk", icon: CloudLightning },
-  { id: "Sofa", label: "Recliner Sofa", icon: BabyIcon },
-  { id: "accessories", label: "Dining Table Set", icon: WatchIcon },
+  { id: "Sofa", label: "Recliner Sofa", icon: SofaIcon },
+  { id: "accessories", label: "Dining Table Set", icon: Table2Icon },
   // { id: "Chair", label: "Wooden Chair", icon: UmbrellaIcon },
-  { id: "Table", label: "Coffee Table", icon: UmbrellaIcon },
-  { id: "Single Bed", label: "Book Shelf", icon: UmbrellaIcon },
+  { id: "Table", label: "Coffee Table", icon: TableIcon },
+  { id: "Single Bed", label: "Book Shelf", icon: BookDashedIcon },
 ];
 
 const brandsWithIcon = [
-  { id: "WoodenStreet", label: "WoodenStreet", icon: Shirt },
-  { id: "HomeTown", label: "HomeTown", icon: WashingMachine },
-  { id: "Durian", label: "Durian", icon: ShoppingBasket },
-  { id: "Nilkamal", label: "Nilkamal", icon: Airplay },
-  { id: "Ikea", label: "Ikea", icon: Images },
+  { id: "WoodenStreet", label: "WoodenStreet", icon: WavesIcon },
+  { id: "HomeTown", label: "HomeTown", icon: LucideHome },
+  { id: "Durian", label: "Durian", icon: Flower2 },
+  { id: "Nilkamal", label: "Nilkamal", icon: Flower },
+  { id: "Ikea", label: "Ikea", icon: TicketMinus },
   { id: "Godrej Interio", label: "Godrej Interio", icon: Heater },
 ];
 function ShoppingHome() {
@@ -345,8 +355,9 @@ function ShoppingHome() {
 
 // RETURN
 return (
+  
   <div className="flex flex-col min-h-screen">
-    <div className="relative w-full h-[600px] overflow-hidden">
+    <div className="relative w-full h-[400px] overflow-hidden">
       {/* Render the images based on the bannerList */}
       {bannerList.length > 0 &&
         bannerList.map((banner, index) => (
@@ -355,7 +366,8 @@ return (
             src={banner} // Dynamically load images
             className={`${
               index === currentSlide ? "opacity-100" : "opacity-0"
-            } absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-1000`}
+            } absolute top-1/2 left-1/2 w-[600px] h-[400px] object-cover transition-opacity duration-1000`}
+            style={{ transform: 'translate(-50%, -50%)' }}
           />
         ))}
       

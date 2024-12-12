@@ -69,13 +69,19 @@ const ProdList = [
 // ShoppingProductTile.js
 const ShopTile = ({ product, handleGetProductDetails, handleAddtoCart }) => {
   return (
-    <div className="product-tile">
-      <img src={product.image} alt={product.title} className="product-image" />
-      <h2>{product.title}</h2>
-      <p>Price: ${product.salePrice.toFixed(2)}</p>
-      <button onClick={() => handleGetProductDetails(product.id)}>View Details</button>
-      <button onClick={() => handleAddtoCart(product)}>Add to Cart</button>
+<div className="product-tile">
+  <div className="product-image-container">
+    <img src={product.image} alt={product.title} className="product-image" />
+  </div>
+  <div className="product-info">
+    <h2>{product.title}</h2>
+    <p>Price: ${product.salePrice.toFixed(2)}</p>
+    <div className="button-group">
+      <button className="bg-cyan-500 hover:bg-cyan-700 text-black font-bold py-2 px-4 rounded" onClick={() => handleGetProductDetails(product.id)}>View Details</button>
+      <button className="bg-orange-500 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded" onClick={() => handleAddtoCart(product)}>Add to Cart</button>
     </div>
+  </div>
+</div>
   );
 };
 
