@@ -25,9 +25,24 @@ import p1 from "../../assets/featured/p1.jpg";
 import p2 from "../../assets/featured/p2.jpg";
 import p3 from "../../assets/featured/p3.jpg";
 import p4 from "../../assets/featured/p4.jpg";
-const images = [p1, p2, p3, p4];
+import p5 from "../../assets/featured/p5.jpg";
+import p6 from "../../assets/featured/p6.jpg";
+import p7 from "../../assets/featured/p7.jpg";
+import p8 from "../../assets/featured/p8.jpg";
+import p9 from '../../assets/featured/p9.jpg';
+import p10 from '../../assets/featured/p10.jpg';
+import p11 from '../../assets/featured/p11.jpg';
+import p12 from '../../assets/featured/p12.jpg';
+import p14 from '../../assets/featured/p14.jpg';
+import p15 from '../../assets/featured/p15.jpg';
+import p13 from '../../assets/featured/p13.jpg';
+import p16 from '../../assets/featured/p16.jpg';
+import p17 from '../../assets/featured/p17.jpg';
+import p18 from '../../assets/featured/p18.jpg';
+import p19 from '../../assets/featured/p19.jpg';
+const images = [p1, p2, p3, p4, p5, p6, p7, p8, p9, p10, p11, p12, p13, p14, p15, p16, p17, p18, p19];
 
-const ProdList = [
+const prodList = [
   {
     id: 1,
     image: p1, // image path
@@ -35,7 +50,7 @@ const ProdList = [
     price: 120.0,
     salePrice: 100.0,
     totalStock: 50,
-    brand: "Furniture Co.",
+    brand: "Adidas",
   },
   {
     id: 2,
@@ -44,7 +59,7 @@ const ProdList = [
     price: 250.0,
     salePrice: 230.0,
     totalStock: 30,
-    brand: "OfficeWorks",
+    brand: "Adidas",
   },
   {
     id: 3,
@@ -53,7 +68,7 @@ const ProdList = [
     price: 500.0,
     salePrice: 450.0,
     totalStock: 15,
-    brand: "Comfy Living",
+    brand: "Adidas",
   },
   {
     id: 4,
@@ -62,8 +77,143 @@ const ProdList = [
     price: 350.0,
     salePrice: 320.0,
     totalStock: 20,
-    brand: "HomeStyle",
+    brand: "Adidas",
   },
+    {
+      id: 5,
+      image: p5,
+      title: "Wooden Scoop and Bowl",
+      price: 450.00,
+      salePrice: 420.00,
+      totalStock: 40,
+      brand: "Adidas"
+    },
+    {
+      id: 6,
+      image: p6,
+      title: "Coffee Table",
+      price: 150.00,
+      salePrice: 130.00,
+      totalStock: 25,
+      brand: "Adidas"
+    },
+    {
+      id: 7,
+      image: p7,
+      title: "Bookshelf",
+      price: 180.00,
+      salePrice: 160.00,
+      totalStock: 35,
+      brand: "Adidas"
+    },
+    {
+      id: 8,
+      image: p8,
+      title: "Storage Cabinet",
+      price: 220.00,
+      salePrice: 200.00,
+      totalStock: 45,
+      brand: "Adidas"
+    },
+      {
+        id: 9,
+        image: p9,
+        title: "Chair",
+        price: 90.00,
+        salePrice: 80.00,
+        totalStock: 50,
+        brand: "Modern Living"
+      },
+      {
+        id: 10,
+        image: p10,
+        title: "Chair",
+        price: 500.00,
+        salePrice: 470.00,
+        totalStock: 20,
+        brand: "WardrobePro"
+      },
+      {
+        id: 11,
+        image: p11,
+        title: "Wooden Plate",
+        price: 120.00,
+        salePrice: 100.00,
+        totalStock: 30,
+        brand: "Reflections"
+      },
+      {
+        id: 12,
+        image: p12,
+        title: "Sectional Sofa",
+        price: 600.00,
+        salePrice: 550.00,
+        totalStock: 15,
+        brand: "ComfyLiving"
+      },
+      {
+        id: 13,
+        image: p13,
+        title: "Center Table",
+        price: 120.00,
+        salePrice: 100.00,
+        totalStock: 40,
+        brand: "HomeFurnish"
+      },
+      {
+        id: 14,
+        image: p14,
+        title: "Armchair",
+        price: 200.00,
+        salePrice: 180.00,
+        totalStock: 30,
+        brand: "RelaxPlus"
+      },
+      {
+        id: 15,
+        image: p15,
+        title: "Storage Bowls",
+        price: 150.00,
+        salePrice: 130.00,
+        totalStock: 25,
+        brand: "SpaceMax"
+      },
+      {
+        id: 16,
+        image: p16,
+        title: "Flower Vase",
+        price: 170.00,
+        salePrice: 150.00,
+        totalStock: 50,
+        brand: "Furniture Plus"
+      },
+      {
+        id: 17,
+        image: p17,
+        title: "Storage Cups",
+        price: 350.00,
+        salePrice: 300.00,
+        totalStock: 20,
+        brand: "RelaxHome"
+      },
+      {
+        id: 18,
+        image: p18,
+        title: "Water Bottle",
+        price: 120.00,
+        salePrice: 100.00,
+        totalStock: 40,
+        brand: "DreamRest"
+      },
+      {
+        id: 19,
+        image: p19,
+        title: "Tea Cups",
+        price: 220.00,
+        salePrice: 200.00,
+        totalStock: 30,
+        brand: "HomeStyle"
+      }
 ];
 
 // ShoppingProductTile.js
@@ -217,7 +367,7 @@ function ShoppingListing() {
           <h2 className="text-lg font-extrabold">All Products</h2>
           <div className="flex items-center gap-3">
           <span className="text-muted-foreground">
-              {productList?.length} Products
+              {prodList?.length} Products
             </span>
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
@@ -246,8 +396,8 @@ function ShoppingListing() {
           </div>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 p-4">
-          {productList && productList.length > 0
-            ? productList.map((productItem) => (
+          {prodList && prodList.length > 0
+            ? prodList.map((productItem) => (
               
                 <ShopTile
                 

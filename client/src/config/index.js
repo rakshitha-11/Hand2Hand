@@ -58,10 +58,10 @@ export const addProductFormElements = [
     name: "category",
     componentType: "select",
     options: [
-      { id: "men", label: "Double Bed" },
-      { id: "Women", label: "Single Bed" },
+      { id: "DoubleBed", label: "Double Bed" },
+      { id: "SingleBed", label: "Single Bed" },
       { id: "Sofa", label: "Sofa" },
-      { id: "accessories", label: "Accessories" },
+      { id: "Accessories", label: "Accessories" },
       { id: "Chair", label: "Chair" },
     ],
   },
@@ -70,12 +70,12 @@ export const addProductFormElements = [
     name: "brand",
     componentType: "select",
     options: [
-      { id: "Burrow", label: "Burrow" },
-      { id: "Adidas", label: "Adidas" },
-      { id: "puma", label: "Floyd" },
-      { id: "levi", label: "Maiden" },
-      { id: "zara", label: "IKEA" },
-      { id: "h&m", label: "Godrej Interio" },
+      { id: "WoodenStreet", label: "WoodenStreet" },
+      { id: "HomeTown", label: "HomeTown" },
+      { id: "Durian", label: "Durian" },
+      { id: "Nilkamal", label: "Nilkamal" },
+      { id: "Ikea", label: "Ikea" },
+      { id: "GodrejInterio", label: "GodrejInterio" },
     ],
   },
   {
@@ -90,7 +90,7 @@ export const addProductFormElements = [
     name: "salePrice",
     componentType: "input",
     type: "number",
-    placeholder: "Enter sale price (optional)",
+    placeholder: "Enter sale price ",
   },
   {
     label: "Total Stock",
@@ -102,23 +102,23 @@ export const addProductFormElements = [
 ];
 
 export const shoppingViewHeaderMenuItems = [
-  {
-    id: "home",
-    label: "Home",
-    path: "/shop/home",
-  },
+  // {
+  //   id: "home",
+  //   label: "Home",
+  //   path: "/shop/home",
+  // },
   {
     id: "products",
     label: "Products",
     path: "/shop/listing",
   },
   {
-    id: "men",
+    id: "DoubleBed",
     label: "Double Bed",
     path: "/shop/listing",
   },
   {
-    id: "Women",
+    id: "SingleBed",
     label: "Single Bed",
     path: "/shop/listing",
   },
@@ -133,23 +133,22 @@ export const shoppingViewHeaderMenuItems = [
     path: "/shop/listing",
   },
   {
-    id: "accessories",
+    id: "Accessories",
     label: "Accessories",
     path: "/shop/listing",
   },
-  {
-    id: "search",
-    label: "Search",
-    path: "/shop/search",
-  },
+  // {
+  //   id: "Search",
+  //   label: "Search",
+  //   path: "/shop/search",
+  // },
 ];
 
 export const categoryOptionsMap = {
-  men: "Double Bed",
-  Women: "Single Bed",
-  Furniture: "Furniture",
+  DoubleBed: "Double Bed",
+  SingleBed: "Single Bed",
   Sofa: "Sofa",
-  accessories: "Accessories",
+  Accessories: "Accessories",
   Chair: "Chair",
 };
 
@@ -171,14 +170,17 @@ export const filterOptions = {
     { id: "accessories", label: "Accessories" },
     { id: "Chair", label: "Chair" },
   ],
-  brand: [
-    { id: "Burrow", label: "Burrow" },
-    { id: "Adidas", label: "Adidas" },
-    { id: "puma", label: "Floyd" },
-    { id: "levi", label: "Maiden Home" },
-    { id: "zara", label: "IKEA" },
-    { id: "h&m", label: "Godrej Interio" },
+
+
+  brands: [
+    { id: "WoodenStreet", label: "WoodenStreet" },
+    { id: "HomeTown", label: "HomeTown" },
+    { id: "Durian", label: "Durian" },
+    { id: "Nilkamal", label: "Nilkamal" },
+    { id: "Ikea", label: "Ikea" },
+    { id: "GodrejInterio", label: "GodrejInterio" },
   ],
+
 };
 
 export const sortOptions = [

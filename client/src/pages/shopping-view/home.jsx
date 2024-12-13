@@ -67,7 +67,7 @@ const featureProdList = [
   {
     id: 5,
     image: p5,
-    title: "Queen Bed Frame",
+    title: "Wooden Scoop and Bowl",
     price: 450.00,
     salePrice: 420.00,
     totalStock: 40,
@@ -103,7 +103,7 @@ const featureProdList = [
   {
     id: 9,
     image: p9,
-    title: "Bar Stool",
+    title: "Chair",
     price: 90.00,
     salePrice: 80.00,
     totalStock: 50,
@@ -112,7 +112,7 @@ const featureProdList = [
   {
     id: 10,
     image: p10,
-    title: "Wardrobe",
+    title: "Chair",
     price: 500.00,
     salePrice: 470.00,
     totalStock: 20,
@@ -121,7 +121,7 @@ const featureProdList = [
   {
     id: 11,
     image: p11,
-    title: "Wall Mirror",
+    title: "Wooden Plate",
     price: 120.00,
     salePrice: 100.00,
     totalStock: 30,
@@ -139,7 +139,7 @@ const featureProdList = [
   {
     id: 13,
     image: p13,
-    title: "End Table",
+    title: "Center Table",
     price: 120.00,
     salePrice: 100.00,
     totalStock: 40,
@@ -157,7 +157,7 @@ const featureProdList = [
   {
     id: 15,
     image: p15,
-    title: "Storage Bench",
+    title: "Storage Bowls",
     price: 150.00,
     salePrice: 130.00,
     totalStock: 25,
@@ -166,7 +166,7 @@ const featureProdList = [
   {
     id: 16,
     image: p16,
-    title: "Coffee Bench",
+    title: "Flower Vase",
     price: 170.00,
     salePrice: 150.00,
     totalStock: 50,
@@ -175,7 +175,7 @@ const featureProdList = [
   {
     id: 17,
     image: p17,
-    title: "Reclining Chair",
+    title: "Storage Cups",
     price: 350.00,
     salePrice: 300.00,
     totalStock: 20,
@@ -184,7 +184,7 @@ const featureProdList = [
   {
     id: 18,
     image: p18,
-    title: "Nightstand",
+    title: "Water Bottle",
     price: 120.00,
     salePrice: 100.00,
     totalStock: 40,
@@ -193,7 +193,7 @@ const featureProdList = [
   {
     id: 19,
     image: p19,
-    title: "Console Table",
+    title: "Tea Cups",
     price: 220.00,
     salePrice: 200.00,
     totalStock: 30,
@@ -203,28 +203,16 @@ const featureProdList = [
 
 
 import {
-  Airplay,
-  BabyIcon,
   BedDoubleIcon,
-  BookDashedIcon,
   ChevronLeftIcon,
   ChevronRightIcon,
-  CloudLightning,
   Flower,
   Flower2,
   Heater,
-  Images,
   LucideHome,
-  Shirt,
-  ShirtIcon,
-  ShoppingBasket,
   SofaIcon,
   Table2Icon,
-  TableIcon,
   TicketMinus,
-  UmbrellaIcon,
-  WashingMachine,
-  WatchIcon,
   WavesIcon,
 } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
@@ -242,13 +230,11 @@ import ProductDetailsDialog from "@/components/shopping-view/product-details";
 import { getFeatureImages } from "@/store/common-slice";
 
 const categoriesWithIcon = [
-  { id: "men", label: "Double Bed", icon: BedDoubleIcon },
-  // { id: "Women", label: "Office Desk", icon: CloudLightning },
-  { id: "Sofa", label: "Recliner Sofa", icon: SofaIcon },
-  { id: "accessories", label: "Dining Table Set", icon: Table2Icon },
-  // { id: "Chair", label: "Wooden Chair", icon: UmbrellaIcon },
-  { id: "Table", label: "Coffee Table", icon: TableIcon },
-  { id: "Single Bed", label: "Book Shelf", icon: BookDashedIcon },
+  { id: "DoubleBed", label: "Double Bed", icon: BedDoubleIcon },
+  { id: "SingleBed", label: "Single Bed", icon: BedDoubleIcon },
+  { id: "Sofa", label: "Sofa", icon: SofaIcon },
+  { id: "Accessories", label: "Accessories", icon: Table2Icon },
+  { id: "Chair", label: "Chair", icon: Table2Icon },
 ];
 
 const brandsWithIcon = [
@@ -257,7 +243,7 @@ const brandsWithIcon = [
   { id: "Durian", label: "Durian", icon: Flower2 },
   { id: "Nilkamal", label: "Nilkamal", icon: Flower },
   { id: "Ikea", label: "Ikea", icon: TicketMinus },
-  { id: "Godrej Interio", label: "Godrej Interio", icon: Heater },
+  { id: "GodrejInterio", label: "GodrejInterio", icon: Heater },
 ];
 function ShoppingHome() {
   const [currentSlide, setCurrentSlide] = useState(0);
